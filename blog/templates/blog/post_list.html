@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Post List</title>
+</head>
+<body>
+	<h1>Post List</h1>
+	{% for obj in object_list %}
+		<div>
+			<h2>{{ obj.title }}</h2>
+			<p>{{ obj.text }}</p>
+			<p><em>Published: {{ obj.published_date|default:"Not published" }}</em></p>
+		</div>
+	{% endfor %}
+</body>
+</html>
